@@ -1,12 +1,12 @@
-class Classement_Joueur{
+class Classement_Joueur {
   ArrayList <Joueur> classement;
-  
-  Classement_Joueur(){
+
+  Classement_Joueur() {
     classement = new ArrayList<Joueur>();
   }
-  
-  boolean ajouterJoueur(String n,int s){
-    classement.add(new Joueur(n,s));
+
+  boolean ajouterJoueur(String n, int s) {
+    classement.add(new Joueur(n, s));
     return true;
   }
 
@@ -31,21 +31,20 @@ class Classement_Joueur{
     return true;
   }
 
-  
-  boolean lectureFichierClassement(String nomFichier){
+
+  boolean lectureFichierClassement(String nomFichier) {
     String[] ligne = loadStrings(nomFichier);
     String[] mots;
-    for(int i=1;i<ligne.length;i++){
-      mots = split(ligne[i],';');
-      ajouterJoueur(mots[0],Integer.parseInt(mots[1]));
+    for (int i=1; i<ligne.length; i++) {
+      mots = split(ligne[i], ';');
+      ajouterJoueur(mots[0], Integer.parseInt(mots[1]));
     }
     return true;
   }
-  
-  void afficherJoueurs(){
-    for(int i=0;i<classement.size();i++){
-      println(classement.get(i).nom,classement.get(i).score);
+
+  void afficherJoueurs() {
+    for (int i=0; i<classement.size(); i++) {
+      println(classement.get(i).nom, classement.get(i).score);
     }
   }
-  
 }

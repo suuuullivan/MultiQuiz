@@ -16,10 +16,12 @@ class Bouton{
   
   void afficheBouton(){
     fill(couleur);
-    rect(p.getX(), p.getY(), longueur, largeur);
+    rect(p.x, p.y, longueur, largeur);
     fill(0, 0, 0);
-    text(texte, (p.getX()+longueur)/2.5, (p.getY()+largeur)/2);
-    
+  }
+  
+  void setText(float x,float y){
+    text(texte,x,y);
   }
   
 }

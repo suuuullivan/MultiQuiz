@@ -1,14 +1,14 @@
-class Joueur{
+class Joueur {
   String nom;
   int score;
-  
-  Joueur(String n){
+
+  Joueur(String n) {
     this.nom = n;
     this.score = 0;
   }
-  
-  Joueur(String n,int s){
+
+  Joueur(String n, int s) {
     this.nom = n;
     this.score = s;
-  }  
+  }
 }
